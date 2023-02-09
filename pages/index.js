@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import DesktopView from '../components/DesktopView';
+import MobileView from '../components/MobileView';
 
 
 export default function Home() {
@@ -16,7 +17,8 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
   <div className='w-full '>
-<DesktopView />
+        <DesktopView />
+        <MobileView />
   </div>
     </div>
   );

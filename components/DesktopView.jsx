@@ -20,7 +20,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 const DesktopView = () => {
   return (
     <CenterLayout>
-      <div className="w-full bg-white my-8 h-[80vh] xl:w-10/12 mx-auto flex flex-col">
+      <div className="w-full bg-white my-8 h-[80vh] xl:w-10/12 mx-auto hidden md:flex flex-col">
         <div className="w-full flex items-center">
           <div className="w-7/12 flex items-center space-x-6">
             <FaTimes className=" text-2xl text-[#888] mr-6" />
