@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import DesktopView from "../components/DesktopView";
-import MobileView from "../components/MobileView";
+import DesktopView from "../../components/DesktopView";
+import MobileView from "../../components/MobileView";
 
 export default function Home() {
   return (
