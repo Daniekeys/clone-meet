@@ -23,7 +23,7 @@ const ComingSoon = () => {
             <p className="text-base lg:text-[32px] text-white z-[20] font-Gilroy text-center ">
               Put your <span className="text-[#F8BA05]"> money </span> where
               your <span className="text-[#F8BA05]"> mouth</span> is,{" "}
-              <span className="text-[#F8BA05]"> makewebet. </span>
+           
             </p>
             <div className="w-full lg:w-5/12 mx-auto mt-6  ">
               <p className=" px-4  lg:px-8 py-3 rounded-md text-white text-center bg-[#513BD0] w-fit mx-auto cursor-pointer">
@@ -82,11 +82,11 @@ const ComingSoon = () => {
                   <BsLinkedin className="text-white text-xl cursor-pointer" />{" "}
                 </div>
               </a>
-              {/* <a href="/home" target="_blank" rel="noreferrer" alt="links">
+              <a href="/home" target="_blank" rel="noreferrer" alt="links">
                 <div>
                   <FaTiktok className="text-white text-xl cursor-pointer" />{" "}
                 </div>
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
