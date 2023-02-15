@@ -13,6 +13,8 @@ import Image from "next/image";
 import lightMode from "../assets/png/light-mode.jpeg"
 import lightOne from "../assets/MakeWeBet/MWB v1/mwbb6.png"
 import darkOne from "../assets/MakeWeBet/MWB v1/mwbb7.png"
+// import lightOne from "../assets/svg/mwbb6.svg"
+// import darkOne from "../assets/svg/mwbb7.svg"
 const ComingSoon = () => {
     const { systemTheme, theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
@@ -70,8 +72,8 @@ const ComingSoon = () => {
             <div className="pt-20"></div>
             <Image
               src={currentTheme === "dark" ? darkOne : lightOne}
-              width={500}
-              height={currentTheme === "dark" ? 200 : 200}
+              width={400}
+              height={currentTheme === "dark" ? 72 : 72}
               
               alt="rice"
             />
