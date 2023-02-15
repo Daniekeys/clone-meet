@@ -12,14 +12,15 @@ export default function Home() {
         <title>Make we Bet</title>
         <meta
           name="description"
-          content="Make we Bet"
+          content="Make safe and trusted bets with
+MakeWeBet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/icon.png" />
+        <link rel="icon" href="/mwbb9.jpg" />
       </Head>
-  <div className='w-full '>
+      <div className="w-full ">
         <ComingSoon />
-  </div>
+      </div>
     </>
   );
 }

@@ -11,6 +11,8 @@ import arrow from "../assets/svg/arrow-head.svg";
 import blue from "../assets/png/useNow.png";
 import Image from "next/image";
 import lightMode from "../assets/png/light-mode.jpeg"
+import lightOne from "../assets/MakeWeBet/MWB v1/mwbb6.png"
+import darkOne from "../assets/MakeWeBet/MWB v1/mwbb7.png"
 const ComingSoon = () => {
     const { systemTheme, theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
@@ -67,16 +69,17 @@ const ComingSoon = () => {
             </div>
             <div className="pt-20"></div>
             <Image
-              src={currentTheme === "dark" ? blue : lightMode}
+              src={currentTheme === "dark" ? darkOne : lightOne}
               width={500}
               height={currentTheme === "dark" ? 200 : 200}
+              
               alt="rice"
             />
 
             {/* <h1 className="mt-6 text-white text-center text-[32px] lg:text-[120px] font-bold z-[20] font-Gilroy">
               Coming Soon
             </h1> */}
-            <p className="text-base lg:text-[32px] text-blackText dark:text-white z-[20] font-Gilroy text-center ">
+            <p className="text-base lg:text-[32px] text-blackText dark:text-white z-[20] font-Gilroy text-center mt-4 ">
               Put your <span className="text-[#F8BA05]"> money </span> where
               your <span className="text-[#F8BA05]"> mouth</span> is.{" "}
             </p>
