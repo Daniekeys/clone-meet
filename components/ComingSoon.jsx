@@ -7,6 +7,7 @@ import bettingIcon from "../assets/png/Betting-icons.svg";
 import grad from "../assets/png/Gradient-image.png";
 import logo from "../assets/svg/logo.svg";
 import arrow from "../assets/svg/arrow-head.svg";
+import blue from "../assets/png/useLogo.png";
 import Image from "next/image";
 const ComingSoon = () => {
   return (
@@ -15,14 +16,14 @@ const ComingSoon = () => {
         <div className="relative h-screen">
           <div className="w-full grid place-items-center  relative  ">
             <div className="pt-20"></div>
-            <Image src={logo} width={70} height={70} alt="rice" />
+            <Image src={blue} width={500} height={200} alt="rice" />
 
-            <h1 className="mt-6 text-white text-center text-[32px] lg:text-[120px] font-bold z-[20] font-Gilroy">
+            {/* <h1 className="mt-6 text-white text-center text-[32px] lg:text-[120px] font-bold z-[20] font-Gilroy">
               Coming Soon
-            </h1>
+            </h1> */}
             <p className="text-base lg:text-[32px] text-white z-[20] font-Gilroy text-center ">
               Put your <span className="text-[#F8BA05]"> money </span> where
-              your <span className="text-[#F8BA05]"> mouth</span> is,{" "}
+              your <span className="text-[#F8BA05]"> mouth</span> is.{" "}
            
             </p>
             <div className="w-full lg:w-5/12 mx-auto mt-6  ">
