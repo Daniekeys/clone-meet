@@ -1,46 +1,97 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import CenterLayout from "../layouts/CenterLayout";
 import { BsInstagram, BsTwitter, BsLinkedin } from "react-icons/bs";
-import {FaTiktok} from "react-icons/fa";
-import a from "next/link";
+import { FaTiktok } from "react-icons/fa";
+import { useTheme } from "next-themes";
 import bettingIcon from "../assets/png/Betting-icons.svg";
 import grad from "../assets/png/Gradient-image.png";
-import logo from "../assets/svg/logo.svg";
+import { BsFillSunFill } from "react-icons/bs";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 import arrow from "../assets/svg/arrow-head.svg";
-import blue from "../assets/png/useLogo.png";
+import blue from "../assets/png/useNow.png";
 import Image from "next/image";
+import lightMode from "../assets/png/light-mode.jpeg"
 const ComingSoon = () => {
+    const { systemTheme, theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+    const currentTheme = theme === "system" ? systemTheme : theme;
   return (
-    <div className="w-full relative bg-black min-h-screen h-full flex flex-col">
+    <div className="w-full relative bg-white dark:bg-black min-h-screen h-full flex flex-col">
+      <div className={currentTheme === "dark" ? "absolute bottom-0" : "hidden"}>
+        <Image
+          src={grad}
+          alt="danilor"
+          width={800}
+          height={800}
+          className=" "
+        />
+      </div>
+ 
+      <div className={currentTheme === "dark" ? "absolute bottom-0" : "hidden"}>
+        <Image
+          src={bettingIcon}
+          alt="danilor"
+          width={200}
+          height={200}
+          className=""
+        />
+      </div>
+
       <CenterLayout>
         <div className="relative h-screen">
           <div className="w-full grid place-items-center  relative  ">
+            <div className=" w-full h-16 flex justify-end pt-4">
+              {currentTheme === "dark" ? (
+                <div
+                  className="flex space-x-4 cursor-pointer dark:text-white text-blackC"
+                  onClick={() => setTheme("light")}
+                >
+                  <p className="text-white dark:text-white">Light </p>
+                  <BsFillSunFill className="text-blackText text-2xl dark:text-white" />
+                </div>
+              ) : (
+                <div
+                  className="flex space-x-4 cursor-pointer dark:text-white text-blackC"
+                  onClick={() => setTheme("dark")}
+                >
+                  <p className="text-blackText">Dark </p>
+                  <BsFillMoonStarsFill className="text-blackText text-2xl dark:text-white" />
+                </div>
+              )}
+            </div>
             <div className="pt-20"></div>
-            <Image src={blue} width={500} height={200} alt="rice" />
+            <Image
+              src={currentTheme === "dark" ? blue : lightMode}
+              width={500}
+              height={currentTheme === "dark" ? 200 : 200}
+              alt="rice"
+            />
 
             {/* <h1 className="mt-6 text-white text-center text-[32px] lg:text-[120px] font-bold z-[20] font-Gilroy">
               Coming Soon
             </h1> */}
-            <p className="text-base lg:text-[32px] text-white z-[20] font-Gilroy text-center ">
+            <p className="text-base lg:text-[32px] text-blackText dark:text-white z-[20] font-Gilroy text-center ">
               Put your <span className="text-[#F8BA05]"> money </span> where
               your <span className="text-[#F8BA05]"> mouth</span> is.{" "}
-           
             </p>
-            <div className="w-full lg:w-5/12 mx-auto mt-6  ">
-              <p className=" px-4  lg:px-8 py-3 rounded-md text-white text-center bg-[#513BD0] w-fit mx-auto cursor-pointer">
-                <a
-                  href="https://forms.gle/p3QoKmqB6vzaUaXi7"
-                  target="_blank"
-                  rel="noreferrer"
-                  alt="links"
-                >
-                  <span className="text-white text-md lg:text-base font-Gilroy cursor-pointer">
-                    Be the first to know when we launch
-                  </span>
-                </a>
-              </p>
+            <div className="w-full lg:w-5/12 mx-auto mt-6  flex justify-center  ">
+              <a
+                href="https://forms.gle/p3QoKmqB6vzaUaXi7"
+                target="_blank"
+                rel="noreferrer"
+                alt="links"
+                className=" text-md lg:text-base font-Gilroy cursor-pointer  px-4  lg:px-8 py-3 rounded-md text-white text-center bg-[#513BD0] w-fit mx-auto z-[60]"
+              >
+                Be the first to know when we launch
+              </a>
             </div>
-            <div className="w-full px-8 flex justify-start lg:w-5/12  lg:mx-auto  ">
+            <div className="w-full px-8 flex justify-start lg:w-5/12  lg:mx-auto z-[3] ">
               <Image
                 src={arrow}
                 alt="danilor"
@@ -49,7 +100,7 @@ const ComingSoon = () => {
             </div>
           </div>
           <div className="flex w-full flex-col lg:flex-row lg:justify-end lg:absolute lg:bottom-12 lg:right-0  lg:space-x-4 items-center mt-12 lg:mt-0">
-            <p className="text-white lg:text-base text-md font-Gilroy">
+            <p className="text-blackText dark:text-white lg:text-base text-md font-Gilroy">
               We are also social:
             </p>
             <div className="flex space-x-4 items-center mt-3 lg:mt-0">
@@ -60,7 +111,7 @@ const ComingSoon = () => {
                 alt="links"
               >
                 <div>
-                  <BsInstagram className="text-white text-xl cursor-pointer" />{" "}
+                  <BsInstagram className=" text-xl cursor-pointer dark:text-white text-blackC" />{" "}
                 </div>
               </a>
               <a
@@ -70,7 +121,7 @@ const ComingSoon = () => {
                 alt="links"
               >
                 <div>
-                  <BsTwitter className="text-white text-xl cursor-pointer" />{" "}
+                  <BsTwitter className=" text-xl cursor-pointer dark:text-white text-blackC" />{" "}
                 </div>
               </a>
               <a
@@ -80,36 +131,18 @@ const ComingSoon = () => {
                 alt="links"
               >
                 <div>
-                  <BsLinkedin className="text-white text-xl cursor-pointer" />{" "}
+                  <BsLinkedin className=" text-xl cursor-pointer dark:text-white text-blackC" />{" "}
                 </div>
               </a>
               <a href="/home" target="_blank" rel="noreferrer" alt="links">
                 <div>
-                  <FaTiktok className="text-white text-xl cursor-pointer" />{" "}
+                  <FaTiktok className="  text-xl cursor-pointer dark:text-white text-blackC" />{" "}
                 </div>
               </a>
             </div>
           </div>
         </div>
       </CenterLayout>
-      <div className="absolute bottom-0 ">
-        <Image
-          src={grad}
-          alt="danilor"
-          width={800}
-          height={800}
-          className=" "
-        />
-      </div>
-      <div className="absolute bottom-0 ">
-        <Image
-          src={bettingIcon}
-          alt="danilor"
-          width={200}
-          height={200}
-          className=""
-        />
-      </div>
     </div>
   );
 };
