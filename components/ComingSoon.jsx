@@ -82,8 +82,8 @@ const ComingSoon = () => {
               Coming Soon
             </h1> */}
             <p className="text-[24px] md:text-[64px] leading-9 md:leading-[56px] font-semibold text-blackText dark:text-white z-[20] font-Gilroy text-center pt-4 pb-6 ">
-              Put your <span className="text-[#F8BA05]"> money <br /> </span> where
-              your <span className="text-[#F8BA05]"> mouth</span> is.{" "}
+              Put your <span className="text-[#28B446]"> money <br /> </span> where
+              your <span className="text-[#28B446]"> mouth</span> is.{" "}
             </p>
             <div className="w-full lg:w-5/12 mx-auto mt-6  flex justify-center  ">
               <a
