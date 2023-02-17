@@ -16,7 +16,7 @@ export default function Home() {
 MakeWeBet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/mwbb9.jpg" />
+        <link rel="icon" href="/mwb3.png" />
       </Head>
       <div className="w-full ">
         <ComingSoon />

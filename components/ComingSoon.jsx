@@ -11,8 +11,8 @@ import arrow from "../assets/svg/arrow-head.svg";
 import blue from "../assets/png/useNow.png";
 import Image from "next/image";
 import lightMode from "../assets/png/light-mode.jpeg"
-import lightOne from "../assets/MakeWeBet/MWB v1/mwbb6.png"
-import darkOne from "../assets/MakeWeBet/MWB v1/mwbb7.png"
+import lightOne from "../assets/MakeWeBet/MWB v2/mwb1.png"
+import darkOne from "../assets/MakeWeBet/MWB v2/mwb3.png"
 // import lightOne from "../assets/svg/mwbb6.svg"
 // import darkOne from "../assets/svg/mwbb7.svg"
 const ComingSoon = () => {
@@ -56,7 +56,7 @@ const ComingSoon = () => {
                   className="flex space-x-4 cursor-pointer dark:text-white text-blackC"
                   onClick={() => setTheme("light")}
                 >
-                  <p className="text-white dark:text-white">Light </p>
+                  <p className="text-white dark:text-white font-Gilroy font-normal">Light </p>
                   <BsFillSunFill className="text-blackText text-2xl dark:text-white" />
                 </div>
               ) : (
@@ -72,8 +72,8 @@ const ComingSoon = () => {
             <div className="pt-20"></div>
             <Image
               src={currentTheme === "dark" ? darkOne : lightOne}
-              width={400}
-              height={currentTheme === "dark" ? 72 : 72}
+              width={129}
+              height={currentTheme === "dark" ? 129 : 129}
               
               alt="rice"
             />
@@ -81,8 +81,8 @@ const ComingSoon = () => {
             {/* <h1 className="mt-6 text-white text-center text-[32px] lg:text-[120px] font-bold z-[20] font-Gilroy">
               Coming Soon
             </h1> */}
-            <p className="text-base lg:text-[32px] text-blackText dark:text-white z-[20] font-Gilroy text-center mt-4 ">
-              Put your <span className="text-[#F8BA05]"> money </span> where
+            <p className="text-base lg:text-[48px] leading-9 text-blackText dark:text-white z-[20] font-Gilroy text-center pt-4 pb-6 ">
+              Put your <span className="text-[#F8BA05]"> money <br /> </span> where
               your <span className="text-[#F8BA05]"> mouth</span> is.{" "}
             </p>
             <div className="w-full lg:w-5/12 mx-auto mt-6  flex justify-center  ">
@@ -91,7 +91,7 @@ const ComingSoon = () => {
                 target="_blank"
                 rel="noreferrer"
                 alt="links"
-                className=" text-md lg:text-base font-Gilroy cursor-pointer  px-4  lg:px-8 py-3 rounded-md text-white text-center bg-[#513BD0] w-fit mx-auto z-[60]"
+                className=" text-md lg:text-base font-Gilroy font-normal cursor-pointer  px-4  lg:px-8 py-3 rounded-md text-white text-center bg-[#513BD0] w-fit mx-auto z-[60]"
               >
                 Be the first to know when we launch
               </a>
@@ -105,7 +105,7 @@ const ComingSoon = () => {
             </div>
           </div>
           <div className="flex w-full flex-col lg:flex-row lg:justify-end lg:absolute lg:bottom-12 lg:right-0  lg:space-x-4 items-center mt-12 lg:mt-0">
-            <p className="text-blackText dark:text-white lg:text-base text-md font-Gilroy">
+            <p className="text-blackText dark:text-white lg:text-base text-md font-Gilroy font-normal">
               We are also social:
             </p>
             <div className="flex space-x-4 items-center mt-3 lg:mt-0">
