@@ -81,7 +81,7 @@ const ComingSoon = () => {
             {/* <h1 className="mt-6 text-white text-center text-[32px] lg:text-[120px] font-bold z-[20] font-Gilroy">
               Coming Soon
             </h1> */}
-            <p className="text-[24px] md:text-[64px] leading-[56px] text-blackText dark:text-white z-[20] font-Gilroy text-center pt-4 pb-6 ">
+            <p className="text-[24px] md:text-[64px] leading-9 md:leading-[56px] text-blackText dark:text-white z-[20] font-Gilroy text-center pt-4 pb-6 ">
               Put your <span className="text-[#F8BA05]"> money <br /> </span> where
               your <span className="text-[#F8BA05]"> mouth</span> is.{" "}
             </p>
